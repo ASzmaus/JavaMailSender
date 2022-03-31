@@ -47,7 +47,7 @@ public class Raise202203SchedulerService {
        }
 
     @Transactional
-    @Scheduled(cron =  "0 15 8 31 3 2022") //at 8:15 am 1st day of each month
+    @Scheduled(cron =  "0 15 8 31 3 ?") //at 8:15 am 31st of March
     public void trackRaiseForClient() {
         log.info("Beginning of scheduler");
 

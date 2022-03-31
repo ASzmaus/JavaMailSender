@@ -11,7 +11,5 @@ Java 8,
 Spring Boot, Spring Data,
 Lombok,
 Firebird, Microsoft SQL
-GitLab,
 Groovy, Spock,
 Unit, integration tests,
-Ubuntu

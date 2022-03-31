@@ -1,0 +1,59 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	<changeSet author="Agnieszka Szmaus" id="01-dev" context="dev" dbms="mssql">
+
+		<insert tableName="statusDokumenty">
+			<column name="Content">wyslano info dot. dok</column>
+		</insert>
+
+		<insert tableName="statusDokumenty">
+			<column name="Content">wyslano przypomnienie dot. dok</column>
+		</insert>
+
+		<insert tableName="statusDokumenty">
+			<column name="Content">dok dostarczone</column>
+		</insert>
+
+        <insert tableName="statusDokumenty">
+            <column name="Content">zalecany kontakt tel.</column>
+        </insert>
+
+	</changeSet>
+
+	<changeSet author="Agnieszka Szmaus" id="02-dev" context="dev" dbms="mssql">
+
+		<insert tableName="eKsiegowyStatus">
+			<column name="Content">w trakcie wysylania info</column>
+		</insert>
+
+		<insert tableName="eKsiegowyStatus">
+			<column name="Content">wyslano info</column>
+		</insert>
+
+		<insert tableName="eKsiegowyStatus">
+			<column name="Content">w trakcie wysylania loginów i hasel</column>
+		</insert>
+
+		<insert tableName="eKsiegowyStatus">
+			<column name="Content">wyslano loginy i hasla</column>
+		</insert>
+
+	</changeSet>
+
+	<changeSet author="Agnieszka Szmaus" id="03-dev" context="dev" dbms="mssql">
+
+		<insert tableName="raise202203Status">
+			<column name="Content">w trakcie wysylania info</column>
+		</insert>
+
+		<insert tableName="raise202203Status">
+			<column name="Content">wyslano info</column>
+		</insert>
+
+	</changeSet>
+
+</databaseChangeLog>

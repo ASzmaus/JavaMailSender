@@ -1,25 +1,10 @@
 package pl.szmaus.unit
 
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.annotation.DirtiesContext.ClassMode
-import org.springframework.test.context.ActiveProfiles
 import pl.szmaus.primary.entity.AdFirms
 import pl.szmaus.primary.repository.AdFirmsRepository
 import pl.szmaus.primary.service.AdFirmsService
-import pl.szmaus.secondary.entity.AdditionlFilesReceivedDocuments
-import pl.szmaus.secondary.repository.AdditionlFilesReceivedDocumentsRepository
-import pl.szmaus.secondary.service.AdditionlFilesReceivedDocumentsService
 import spock.lang.Specification
 import spock.lang.Unroll
-
-import static java.time.LocalDate.now
-
-@SpringBootTest
-@ActiveProfiles("test")
-@AutoConfigureMockMvc
-@DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
 
 class AdFirmsServiceUnitTest extends Specification {
 
@@ -51,24 +36,6 @@ class AdFirmsServiceUnitTest extends Specification {
 						.taxId("222222222")
 						.build())
 	}
-
-//	@Unroll
-//	def "VerificationIfTaxIdIsValid where taxId=null"() {
-//		given:
-//		adFirmsRepository.findAll() >> Arrays.asList(AdFirms.builder()
-//				.id(1)
-//				.number(100)
-//				.fullname("Test1")
-//				.firmEmailAddress("test1@interia.pl")
-//				.taxId(taxId)
-//				.build())
-//		when: 'put data'
-//				adFirmsService.verificationIfTaxIdIsValid()
-//		then:
-//				thrown IllegalArgumentException
-//		where:
-//				taxId = null
-//	}
 
 	@Unroll
 	def "ifEmailAdressExists where adFirm=#adFirm"()

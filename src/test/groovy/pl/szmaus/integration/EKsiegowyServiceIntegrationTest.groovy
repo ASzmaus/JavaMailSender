@@ -6,7 +6,6 @@ import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.annotation.DirtiesContext
 import org.springframework.test.annotation.DirtiesContext.ClassMode
 import org.springframework.test.context.ActiveProfiles
-import pl.szmaus.secondary.service.GmFsService
 import pl.szmaus.third.service.EKsiegowyService
 import spock.lang.Specification
 

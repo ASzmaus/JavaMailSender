@@ -1,11 +1,5 @@
 package pl.szmaus.unit
 
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc
-import org.springframework.boot.test.context.SpringBootTest
-import org.springframework.test.annotation.DirtiesContext
-import org.springframework.test.annotation.DirtiesContext.ClassMode
-import org.springframework.test.context.ActiveProfiles
-import pl.szmaus.exception.EntityNotFoundException
 import pl.szmaus.primary.entity.AdFirms
 import pl.szmaus.primary.repository.AdFirmsRepository
 import pl.szmaus.secondary.entity.AdditionlFilesReceivedDocuments
@@ -15,11 +9,6 @@ import spock.lang.Specification
 import spock.lang.Unroll
 
 import static java.time.LocalDate.now
-
-@SpringBootTest
-@ActiveProfiles("test")
-@AutoConfigureMockMvc
-@DirtiesContext(classMode = ClassMode.BEFORE_EACH_TEST_METHOD)
 
 class AdditionlFilesReceivedDocumentsUnitTest extends Specification {
 

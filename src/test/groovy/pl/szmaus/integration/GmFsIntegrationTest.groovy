@@ -5,8 +5,6 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles
-import org.springframework.security.test.context.support.WithUserDetails
-import pl.szmaus.secondary.repository.GmFsRepository
 import pl.szmaus.secondary.service.GmFsService
 import spock.lang.Specification;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;

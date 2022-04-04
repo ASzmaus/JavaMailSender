@@ -160,10 +160,11 @@ public class DeliveryOfDocumentsSchedulerService {
     }
 
     private Boolean ifNotReceivedDocumentFirstInfo(ReceivedDocumentsFromClients receivedDocumentsFromClients) {
-        if (receivedDocumentsFromClients == null || (receivedDocumentsFromClients.getIdReceivedDocumentsFromClientsStatus() == 1 && !receivedDocumentsFromClients.getData().equals(now().minusMonths(1).toString().substring(0, 7))) || (receivedDocumentsFromClients.getIdReceivedDocumentsFromClientsStatus() == 2 && !receivedDocumentsFromClients.getData().equals(now().minusMonths(1).toString().substring(0, 7))) || (receivedDocumentsFromClients.getIdReceivedDocumentsFromClientsStatus() == 3 && !receivedDocumentsFromClients.getData().equals(now().minusMonths(1).toString().substring(0, 7))))
+        if (receivedDocumentsFromClients == null || !receivedDocumentsFromClients.getData().equals(now().minusMonths(1).toString().substring(0, 7))) {
             return true;
-        else
+        }else {
             return false;
+        }
     }
 
     private Boolean ifNotReceivedDocumentFirstReminder(ReceivedDocumentsFromClients receivedDocumentsFromClients) {
